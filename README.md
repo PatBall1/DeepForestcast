@@ -3,6 +3,8 @@
  [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
  <a href="https://github.com/psf/black"><img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg"></a>
 
+Deep convolutional neural networks to forecast tropical deforestation.
+
 Please cite:
 
 Using deep convolutional neural networks to forecast spatial patterns of Amazonian deforestation.
