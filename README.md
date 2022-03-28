@@ -24,7 +24,7 @@ James Ball, Katerina Petrova, David A. Coomes, Seth Flaxman.
 
 Tropical forests are subject to diverse deforestation pressures but their conservation is essential to achieve global climate goals. Predicting the location of deforestation is challenging due to the complexity of the natural and human systems involved but accurate and timely forecasts could enable effective planning and on-the-ground enforcement practices to curb deforestation rates. New computer vision technologies based on deep learning can be applied to the increasing volume of Earth observation data to generate novel insights and make predictions with unprecedented accuracy.
 
-Here, we demonstrate the ability of deep convolutional neural networks to learn spatiotemporal patterns of deforestation from a limited set of freely available global data layers, including multispectral satellite imagery, the Hansen maps of historic deforestation (2001-2020) and the ALOS JAXA digital surface model, to forecast future deforestation (2021). We designed four original deep learning model architectures, based on 2D Convolutional Neural Networks (2DCNN), 3D Convolutional Neural Networks (3DCNN), and Long Short-Term Memory (LSTM) Recurrent Neural Networks (RNN) to produce spatial maps that indicate the risk to each forested pixel (~30 m) in the landscape of becoming deforested within the next year. They were trained and tested on data from two ~80,000 km2 tropical forest regions in the Southern Peruvian Amazon.
+Here, we demonstrate the ability of deep convolutional neural networks to learn spatiotemporal patterns of deforestation from a limited set of freely available global data layers, including multispectral satellite imagery, the Hansen maps of historic deforestation (2001-2020) and the ALOS JAXA digital surface model, to forecast future deforestation (2021). We designed four original deep learning model architectures, based on 2D Convolutional Neural Networks (2DCNN), 3D Convolutional Neural Networks (3DCNN), and Convolutional Long Short-Term Memory (ConvLSTM) Recurrent Neural Networks (RNN) to produce spatial maps that indicate the risk to each forested pixel (~30 m) in the landscape of becoming deforested within the next year. They were trained and tested on data from two ~80,000 km2 tropical forest regions in the Southern Peruvian Amazon.
 
 ## Getting started
 
@@ -52,15 +52,15 @@ Schematic of network
 ![Network](/report/figures/schematicOfNetwork.png#gh-light-mode-only)
 ![Network](/report/figures/schematicOfnetworkDARK.png#gh-dark-mode-only)
 
-2D CNN architecture
+[2D CNN architecture](/src/models/2DCNN.py)
 
 ![2DCNN](/report/figures/2DCNNmodel.PNG)
 
-3D CNN architecture
+[3D CNN architecture](/src/models/ConvRNN.py)
 
 ![3DCNN](/report/figures/3DConvModel.PNG)
 
-ConvLSTM architecture
+[ConvLSTM architecture](/src/models/ConvRNN.py)
 
 ![ConvLSTM](/report/figures/LSTMmodels.PNG)
 
