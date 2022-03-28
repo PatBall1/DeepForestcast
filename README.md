@@ -14,6 +14,10 @@
 
 ![Example forecast](/report/figures/ForecastExamples.png)
 
+## Networks
+
+![Network](/report/figures/schematicOfNetwork.png)
+
 ## Project Organization
 ```
 ├── LICENSE
