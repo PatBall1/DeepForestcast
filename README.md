@@ -8,10 +8,11 @@
 
 ## Getting started
 
+[Preprint available](https://www.biorxiv.org/content/10.1101/2021.12.14.472442v1.full)
 
 ## Example forecast
 
-![Example forecast](/reports/figures/ForecastExamples.png)
+![Example forecast](/reports/figures/ForecastExamples.png =250x250)
 
 ## Project Organization
 ```
