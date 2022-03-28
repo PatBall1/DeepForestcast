@@ -9,6 +9,10 @@
 ## Getting started
 
 
+## Example forecast
+
+![Example forecast](/reports/figures/ForecastExamples.png)
+
 ## Project Organization
 ```
 ├── LICENSE
