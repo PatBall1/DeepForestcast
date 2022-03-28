@@ -12,7 +12,7 @@
 
 ## Example forecast
 
-![Example forecast](/reports/figures/ForecastExamples.png)
+![Example forecast](/report/figures/ForecastExamples.png)
 
 ## Project Organization
 ```
