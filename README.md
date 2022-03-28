@@ -6,7 +6,9 @@
 Please cite:
 
 Using deep convolutional neural networks to forecast spatial patterns of Amazonian deforestation
+
 James Ball, Katerina Petrova, David A. Coomes, Seth Flaxman
+
 *bioRxiv* 2021.12.14.472442; doi: [https://doi.org/10.1101/2021.12.14.472442](https://doi.org/10.1101/2021.12.14.472442*)
 
 
