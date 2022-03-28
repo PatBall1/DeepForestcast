@@ -22,6 +22,14 @@ Schematic of network
 
 ![Network](/report/figures/schematicOfNetwork.png)
 
+![2DCNN](/report/figures/2DCNNmodel.PNG)
+
+![3DCNN](/report/figures/3DConv.PNG)
+
+![ConvLSTM](/report/figures/LSTMmodels.PNG)
+
+
+
 ## Project Organization
 ```
 ├── LICENSE
