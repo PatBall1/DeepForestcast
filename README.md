@@ -10,11 +10,15 @@
 
 [Preprint available](https://www.biorxiv.org/content/10.1101/2021.12.14.472442v1.full)
 
-## Example forecast
+## Forecast
+
+Deep CNNs can predict how deforestation frontiers are likely to evolve
 
 ![Example forecast](/report/figures/ForecastExamples.png)
 
 ## Networks
+
+Schematic of network
 
 ![Network](/report/figures/schematicOfNetwork.png#gh-light-mode-only)
 
