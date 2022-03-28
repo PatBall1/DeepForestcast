@@ -15,7 +15,7 @@ James Ball, Katerina Petrova, David A. Coomes, Seth Flaxman.
 - scikit-learn
 - torch 1.9.0
 - torchaudio 0.9.0
-- torchvision==0.10.0
+- torchvision 0.10.0
 
 
 ## Introduction
@@ -30,10 +30,10 @@ James Ball, Katerina Petrova, David A. Coomes, Seth Flaxman.
 
 Deep CNNs can predict how deforestation frontiers are likely to evolve
 
-a) Agricultural expansion
-b) Illegal gold mine
-c) New forest road
-d) Remote landslide
+a) Agricultural expansion  
+b) Illegal gold mine  
+c) New forest road  
+d) Remote landslide  
 
 ![Example forecast](/report/figures/ForecastExamples.png)
 
