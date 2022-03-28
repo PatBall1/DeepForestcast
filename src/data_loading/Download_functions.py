@@ -223,4 +223,3 @@ def download_data(shp, dwnldPath, years, types_static, types_dynamic, gridPath):
                         )
                         print("RETRY DOWNLOAD SCRIPT")
                         break
-

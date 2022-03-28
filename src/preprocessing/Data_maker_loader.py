@@ -60,13 +60,13 @@ def if_def_when(lossyear, year, cutoffs=[2, 5, 8]):
     Values in cutoffs define the time bins
     Returns len(cutoffs) + 1 categorical layers:
     Example: cutoffs = [2,5,8], num of layers = 4 , considered year = year
-    Categories: 
-    0) if year - lossyear is in [0,2) 
-    1) if year - lossyear is in [2,5) 
-    2) if year - lossyear is in [5,8) 
+    Categories:
+    0) if year - lossyear is in [0,2)
+    1) if year - lossyear is in [2,5)
+    2) if year - lossyear is in [5,8)
     3) 8 years ago or more
     No prior knowledge:
-        if loss event is in year > considered year or pixel is non deforested up to 2018+, all categories have value 0 
+        if loss event is in year > considered year or pixel is non deforested up to 2018+, all categories have value 0
     """
     cutoffs.append(year)
     cutoffs.insert(0, 0)
@@ -93,28 +93,28 @@ def create_tnsors_pixels(
     wherepath=None,
 ):
     """
-    Given year, and cutoffs as defined above returns (and save if wherepath!= None) 
+    Given year, and cutoffs as defined above returns (and save if wherepath!= None)
         Static tensor,
         Non static tensor,
         list of valid pixels codrinates,
         list of labels corresponding to this valid cordinates
-    
+
     sourcepath = path to tiff files
     wherepath = in not None, path to where to save the tensors
-        
+
     Static tensor is identical for any year, hence save only once
     Static tensor has datamask layer and treecover
-    
+
     Nonstatic tensor has if_deff_when cathegorical layers and the image landsat 7 bands stacked
-    
+
     Valid pixels are these that meet all the following conditions :
      1. datamask == 1 , eg                        land not water body
-     2. tree_cover > tree_p   or   gain == 1      if threecanpy in 2000 > tree_p or became forest up to 2012 
-     3. lossyear > end_year   or   lossyear == 0  experienced loss only after that year (or not at all in the study period)    
+     2. tree_cover > tree_p   or   gain == 1      if threecanpy in 2000 > tree_p or became forest up to 2012
+     3. lossyear > end_year   or   lossyear == 0  experienced loss only after that year (or not at all in the study period)
      4. buffer == 0                               is in Madre de Dios area
-     
-    for each valid pixel asign label 1 if it is deforested in exactly in year+1 or zero otherwise  
-    
+
+    for each valid pixel asign label 1 if it is deforested in exactly in year+1 or zero otherwise
+
     All pixels in the rasters and produced tensors have value 111 in the locations outside Madre de Dios and its buffer
     """
     buffer = to_Tensor(sourcepath, "if_in_buffer.tif")
@@ -171,14 +171,14 @@ def create_tnsors_pixels(
 class DatasetCNNHDF5(Dataset):
     """
     CNN Data class -- using HDF5 storage
-        
+
         if it is passed list of image, pixels and labels, it concatenates the data as one, where inputs are
         all pairs of image:next year labels for valid pixels. Pairs are ordered as sequences in the same order as
         in the flatten list (NOT IMPLEMENTED YET)
-        
+
         if list is of length 1, only one year pairs
-        
-        size is the radius of the image. Can be modified with Data.change_size(new size)   
+
+        size is the radius of the image. Can be modified with Data.change_size(new size)
     """
 
     def __init__(self, size, static, image, pixels, labels, indices):
@@ -232,14 +232,14 @@ class DatasetCNNHDF5(Dataset):
 class DatasetCNN(Dataset):
     """
     CNN Data class
-        
+
         if it is passed list of image, pixels and labels, it concatenates the data as one, where inputs are
         all pairs of image:next year labels for valid pixels. Pairs are ordered as sequences in the same order as
         in the flatten list
-        
+
         if list is of length 1, only one year pairs
-        
-        size is the radius of the image. Can be modified with Data.change_size(new size)   
+
+        size is the radius of the image. Can be modified with Data.change_size(new size)
     """
 
     def __init__(self, size, static, image, pixels, labels):
@@ -385,8 +385,8 @@ def load_CNNdata(
     path="'/rdsgpfs/general/user/kpp15/home/Hansen/data/raster/tensors'",
 ):
     """
-    given start year, end year and size initialize CNN data class 
-    start year and end year define how many pairs imange - next year label the data to have 
+    given start year, end year and size initialize CNN data class
+    start year and end year define how many pairs imange - next year label the data to have
     size defines the returned image size
     path = path to saved tensors
     To add extra static layers, add_static must be a list of this tensors (2D or 3D for multi-channels)
@@ -481,7 +481,7 @@ def with_DSM(size, start_year, end_year, wherepath, DSM=False, type="3D"):
 class DatasetCNNforecast(Dataset):
     """
     CNN Data class of images and coordinates but no labels
-    size is the radius of the mage. Can be modified with Data.change_size(new size)   
+    size is the radius of the mage. Can be modified with Data.change_size(new size)
     """
 
     def __init__(self, size, static, image, pixels):
@@ -567,7 +567,7 @@ class DatasetRNN(Dataset):
     """
     Data class for Models 2:4
     get_item return static tensor (to be fed in the static branch)
-    and a 4d Tensor of non static images where the shape is as follows: 
+    and a 4d Tensor of non static images where the shape is as follows:
     (c,t,h,w) = (channels per image ,time , h = 2*size+1, w = 2*size+1)
     change_size sets new image size: h&w = 2*new_size + 1
     """
@@ -671,7 +671,7 @@ def load_RNNdata(
     path="'/rdsgpfs/general/user/kpp15/home/Hansen/data/raster/tensors'",
 ):
     """
-    given start year, end year and size initilalize RNN data class 
+    given start year, end year and size initilalize RNN data class
     start year and end year define number of elements in the time series of images
     size define the returned image size
     path = path to saved tensors
@@ -725,7 +725,7 @@ def load_RNNdata_forecast(
     path="/rdsgpfs/general/user/kpp15/home/Hansen/data/raster/tensors",
 ):
     """
-    given start year, end year and size initilalize RNN data class 
+    given start year, end year and size initilalize RNN data class
     start year and end year define number of elements in the time series of images
     size define the returned image size
     path = path to saved tensors
@@ -879,4 +879,3 @@ if __name__ == "__main__":
 #     Static shape torch.Size([3, 91, 91])
 #     Image shape torch.Size([8, 3, 91, 91])
 #     Data lenght 108005217
-

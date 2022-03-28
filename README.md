@@ -20,7 +20,7 @@ Deep CNNs can predict how deforestation frontiers are likely to evolve
 
 Schematic of network
 
-![Network](/report/figures/schematicOfNetwork.png#gh-light-mode-only)
+![Network](/report/figures/schematicOfNetwork.png)
 
 ## Project Organization
 ```

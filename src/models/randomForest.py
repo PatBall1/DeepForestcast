@@ -269,4 +269,3 @@ cm = confusion_matrix(targettest, predtest)
 print(cm)
 cr = classification_report(targettest, predtest)
 print(cr)
-

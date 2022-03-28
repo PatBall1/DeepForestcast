@@ -10,7 +10,7 @@ class ConvLSTMCell(nn.Module):
     def __init__(self, input_size, input_dim, hidden_dim, kernel_size, bias):
         """
         Initialize ConvLSTM cell.
-        
+
         Parameters
         ----------
         input_size: (int, int)
