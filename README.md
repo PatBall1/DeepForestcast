@@ -16,7 +16,7 @@
 
 ## Networks
 
-![Network](/report/figures/schematicOfNetwork.png)
+![Network](/report/figures/schematicOfNetwork.png#gh-light-mode-only)
 
 ## Project Organization
 ```
