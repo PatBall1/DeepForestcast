@@ -50,7 +50,7 @@ d) Remote landslide*
 Schematic of network
 
 ![Network](/report/figures/schematicOfNetwork.png#gh-light-mode-only)
-![Network](/report/figures/schematicOfNetworkDARK.png#gh-dark-mode-only)
+![Network](/report/figures/schematicOfnetworkDARK.png#gh-dark-mode-only)
 
 2D CNN architecture
 
