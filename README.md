@@ -3,8 +3,19 @@
  [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
  <a href="https://github.com/psf/black"><img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg"></a>
 
+Please cite:
+
+Using deep convolutional neural networks to forecast spatial patterns of Amazonian deforestation
+James Ball, Katerina Petrova, David A. Coomes, Seth Flaxman
+*bioRxiv* 2021.12.14.472442; doi: [https://doi.org/10.1101/2021.12.14.472442](https://doi.org/10.1101/2021.12.14.472442*)
+
+
 ## Requirements
 - Python 3.8+
+
+## Introduction
+
+
 
 ## Getting started
 
@@ -14,6 +25,11 @@
 
 Deep CNNs can predict how deforestation frontiers are likely to evolve
 
+a) Agricultural expansion
+b) Illegal gold mine
+c) New forest road
+d) Remote landslide
+
 ![Example forecast](/report/figures/ForecastExamples.png)
 
 ## Networks
@@ -22,9 +38,15 @@ Schematic of network
 
 ![Network](/report/figures/schematicOfNetwork.png)
 
+2D CNN architecture
+
 ![2DCNN](/report/figures/2DCNNmodel.PNG)
 
-![3DCNN](/report/figures/3DConv.PNG)
+3D CNN architecture
+
+![3DCNN](/report/figures/3DConvModel.PNG)
+
+ConvLSTM architecture
 
 ![ConvLSTM](/report/figures/LSTMmodels.PNG)
 
