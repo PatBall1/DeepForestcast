@@ -6,11 +6,11 @@
 
 Deep convolutional neural networks to forecast tropical deforestation.
 
+## Citation
+
 Please cite:
 
-Using deep convolutional neural networks to forecast spatial patterns of Amazonian deforestation.
-James Ball, Katerina Petrova, David A. Coomes, Seth Flaxman.
-*bioRxiv* 2021.12.14.472442; doi: [https://doi.org/10.1101/2021.12.14.472442](https://doi.org/10.1101/2021.12.14.472442*)
+Ball, J. G. C., Petrova, K., Coomes, D. A., & Flaxman, S. (2022). Using deep convolutional neural networks to forecast spatial patterns of Amazonian deforestation. Methods in Ecology and Evolution, 13, 2622– 2634. [https://doi.org/10.1111/2041-210X.13953](https://doi.org/10.1111/2041-210X.13953)
 
 
 ## Requirements
